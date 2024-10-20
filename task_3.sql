@@ -1,2 +1,5 @@
--- Show all the tables in the given database
+-- Select the database to work with
+USE alx_book_store;
+
+-- List all the tables in the database
 SHOW TABLES;

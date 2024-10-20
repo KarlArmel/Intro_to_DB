@@ -1,4 +1,4 @@
--- Query the INFORMATION_SCHEMA to get detailed information about the books table
+-- Query the INFORMATION_SCHEMA to get detailed information about the Books table
 SELECT 
     COLUMN_NAME, 
     COLUMN_TYPE, 
@@ -8,5 +8,5 @@ SELECT
 FROM 
     INFORMATION_SCHEMA.COLUMNS
 WHERE 
-    TABLE_SCHEMA = DATABASE()  -- This ensures we are querying the current database
-    AND TABLE_NAME = 'Books';  -- Specify the table name as 'Books'
+    TABLE_SCHEMA = 'alx_book_store'  -- Specify the database schema
+    AND TABLE_NAME = 'Books';        -- Specify the table name as 'Books'
