@@ -17,16 +17,9 @@ def create_database():
             # Create a cursor object
             cursor = connection.cursor()
 
-            # Check if the database already exists
-            cursor.execute("SHOW DATABASES LIKE 'alx_book_store'")
-
-            # If the database does not exist, create it
-            if cursor.fetchone():
-                print("Database 'alx_book_store' already exists!")
-            else:
-                # Create the 'alx_book_store' database
-                cursor.execute("CREATE DATABASE alx_book_store")
-                print("Database 'alx_book_store' created successfully!")
+            # Create the 'alx_book_store' database if it doesn't exist
+            cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
+            print("Database 'alx_book_store' created successfully or already exists!")
 
     except Error as e:
         # Print error message if there's an issue
