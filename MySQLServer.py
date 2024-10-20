@@ -21,7 +21,7 @@ def create_database():
             cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
             print("Database 'alx_book_store' created successfully or already exists!")
 
-    except Error as e:
+    except mysql.connector.Error as e:  # Handle the specific mysql.connector.Error
         # Print error message if there's an issue
         print(f"Error: {e}")
     
